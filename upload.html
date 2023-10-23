@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 5 Website Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    
+  </style>
+</head>
+<body>
+  <div class="p-5 bg-primary text-white text-center">
+    <h1>海廢專題</h1>
+    <p>上傳圖片</p>
+  </div>
+  
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+      
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="pro_1.html">澎湖海灘介紹</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="map.html">澎湖地圖</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="pro_img.html">海邊廢棄物</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="upload.html">上傳圖片</a>
+        </li>
+      </ul>
+      
+    </div>
+  </nav>
+  
+    <form action="uploadfile.php" method="POST" enctype="multipart/form-data">
+        <div>
+          <label for="formFileLg" class="form-label">沙灘圖片上傳</label>
+          <input class="form-control form-control-lg" id="myfile" type="file">
+          <input class="form-control form-control-lg" value="上傳檔案" type="submit">
+        </div>
+    </form>
+
+    
+</body>

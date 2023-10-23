@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 5 Website Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  <style>
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+  </style>
+</head>
+<body>
+
+<div class="p-5 bg-primary text-white text-center">
+  <h1>海廢專題</h1>
+  <p>海邊廢棄物</p>
+</div>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <div class="container-fluid">
+    
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="pro_1.html">澎湖海灘介紹</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="map.html">澎湖地圖</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="pro_img.html">海邊廢棄物</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="upload.html">上傳圖片</a>
+      </li>
+    </ul>
+    
+  </div>
+</nav>
+
+<div class="chart-box">
+
+    <div class="chart-body">
+      <canvas id="myChart"></canvas>
+      <script>
+        var ctx = document.getElementById('myChart');
+        var chart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"], //顯示區間名稱
+            datasets: [{
+              label: '標籤名稱', // tootip 出現的名稱
+              data: [12, 19, 3, 5, 6, 3], // 資料
+              backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+              ],
+              borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+              ],
+              borderWidth: 1,
+            }]
+          }
+        });
+      </script>
+    </div>
+    <!-- end chart-body -->
+
+</div>
+
+
+
+</body>
+</html>

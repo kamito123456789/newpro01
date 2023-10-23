@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 5 Website Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  <link rel="stylesheet" href="leaflet/leaflet.css" />
+  <script src="leaflet/leaflet.js"></script>
+  <style>
+    #map { height:693px; }
+  </style>
+</head>
+<body>
+
+  <div class="p-5 bg-primary text-white text-center">
+    <h1>海廢專題</h1>
+    <p>澎湖地圖</p>
+  </div>
+  
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+      
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="pro_1.html">澎湖海灘介紹</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="map.html">澎湖地圖</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="pro_img.html">海邊廢棄物</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="upload.html">上傳圖片</a>
+        </li>
+      </ul>
+      
+    </div>
+  </nav>
+
+  <div id="map"></div>
+  <script>
+    var map = L.map('map').setView([23.574169, 119.609263], 10);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+    
+    var marker1 = L.marker([23.51333292958781, 119.59111774654414]).addTo(map);
+    marker1.bindPopup("<b>山水沙灘</b>");
+    var marker2 = L.marker([23.598826315973007, 119.67127475248874]).addTo(map);
+    marker2.bindPopup("<b>奎壁山奇景</b>");
+    var marker3 = L.marker([23.60778696928136, 119.63030047398713]).addTo(map);
+    marker3.bindPopup("<b>澎湖灘</b>");
+    var marker4 = L.marker([23.356411473880463, 119.50300799851713]).addTo(map);
+    marker4.bindPopup("<b>網垵口沙灘</b>");
+    var marker5 = L.marker([23.71152194137649, 119.60857953899946]).addTo(map);
+    marker5.bindPopup("<b>險礁比基尼島</b>");
+    var marker6 = L.marker([23.1969093243262, 119.42979207153044]).addTo(map);
+    marker6.bindPopup("<b>月鯉灣沙灘</b>");
+    var marker7 = L.marker([23.7288615572114, 119.60320356196087]).addTo(map);
+    marker7.bindPopup("<b>吉貝沙尾</b>");
+    var marker8 = L.marker([23.555527210654198, 119.63903279259137]).addTo(map);
+    marker8.bindPopup("<b>隘門沙灘</b>");
+    var marker9 = L.marker([23.532190320404442, 119.55368028502906]).addTo(map);
+    marker9.bindPopup("<b>青灣情人海灘</b>");
+    var marker10 = L.marker([23.526269234082992, 119.566890731204]).addTo(map);    
+    marker10.bindPopup("<b>蒔裡海灘</b>");
+  </script>
+</body>
